@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLinearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imageLeft"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/backp"
+            android:contentDescription="Back Button" />
+
+        <ImageView
+            android:id="@+id/imageRight"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/logop"
+            android:contentDescription="App Logo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/middleLinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="Register"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="30sp"
+                />
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                android:layout_height="100dp"
+                android:layout_width="match_parent">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/emailp" />
+
+                <LinearLayout
+                    android:paddingStart="15dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:paddingLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Name" />
+
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:textSize="16sp"
+                        android:hint="Name"
+                        android:inputType="textPersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/text_color"
+                        android:contentDescription="Name Column" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_height="100dp"
+                android:layout_width="match_parent">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/emailp" />
+
+                <LinearLayout
+                    android:paddingStart="15dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:paddingLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="E-mail" />
+
+                    <EditText
+                        android:contentDescription="Email Column"
+                        android:id="@+id/email"                        android:textSize="16sp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/text_color" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_height="100dp"
+                android:layout_width="match_parent">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/lockp" />
+
+                <LinearLayout
+                    android:paddingStart="15dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:paddingLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Password" />
+
+                    <EditText
+                        android:contentDescription="Password Column"
+                        android:id="@+id/password"                        android:textSize="16sp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/text_color" />
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:textSize="20sp"
+                    android:id="@+id/radio_students"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Student" />
+
+                <RadioButton
+                    android:textSize="20sp"
+                    android:id="@+id/radio_owners"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Owner" />
+
+            </RadioGroup>
+
+            <Button
+                android:layout_marginBottom="30dp"
+                android:id="@+id/signUpButton"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:contentDescription="Sign Up Button"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+    <!-- <LinearLayout
+         android:id="@+id/bottomLinearLayout"
+         app:layout_constraintBottom_toBottomOf="parent"
+         android:layout_width="match_parent"
+         android:layout_height="170dp"
+         android:orientation="vertical"
+         android:gravity="center_horizontal">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:gravity="center"
+             android:layout_marginTop="20dp">
+
+             <View
+                 android:layout_marginLeft="20dp"
+                 android:layout_width="0dp"
+                 android:layout_height="2dp"
+                 android:layout_weight="1"
+                 android:background="@color/text_color" />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="10dp"
+                 android:layout_marginEnd="10dp"
+                 android:text="Or Continue With"
+                 android:textColor="@color/black" />
+
+             <View
+                 android:layout_marginRight="20dp"
+                 android:layout_width="0dp"
+                 android:layout_height="2dp"
+                 android:layout_weight="1"
+                 android:background="@color/text_color" />
+         </LinearLayout>
+
+         <ImageView
+             android:id="@+id/gooogle"
+             android:layout_marginTop="10dp"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:src="@drawable/google"/>
+
+     </LinearLayout>-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".WelcomeActivity">
+
+    <LinearLayout
+        android:id="@+id/toplinearlayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Welcome To"
+            android:textSize="40sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="120dp"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/logop"
+            android:contentDescription="Logo"/>
+
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/btn"
+            android:textColor="@color/white"
+            android:contentDescription="Sign In Button"/>
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:background="@drawable/btnsignup"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            android:contentDescription="Sign Up Button"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
