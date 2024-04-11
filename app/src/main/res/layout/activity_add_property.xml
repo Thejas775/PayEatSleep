@@ -120,21 +120,32 @@
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            style="?attr/textInputFilledStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type of the property (PG/Restaurant)">
+            android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/type"
-                android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/pg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="PG" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <RadioButton
+                android:id="@+id/mess"
+                android:layout_width="0dp"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mess" />
+
+        </RadioGroup>
 
         <Button
             android:id="@+id/addimages"

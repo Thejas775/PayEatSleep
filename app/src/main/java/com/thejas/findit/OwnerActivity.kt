@@ -105,6 +105,13 @@ class OwnerActivity : AppCompatActivity() {
                 finish()
                 return true
             }
+            R.id.refresh -> {
+                fetchProperties()
+                Toast.makeText(this, "Items Updated", Toast.LENGTH_SHORT).show()
+                return true
+            }
+
+
 
             else -> return super.onOptionsItemSelected(item)
         }

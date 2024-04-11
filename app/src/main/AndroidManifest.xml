@@ -17,9 +17,11 @@
             android:exported="false" />
         <activity
             android:name=".OwnerActivity"
-            android:exported="false" />
+            android:screenOrientation="portrait"
+        android:exported="false" />
         <activity
             android:name=".StudentActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
@@ -44,9 +46,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

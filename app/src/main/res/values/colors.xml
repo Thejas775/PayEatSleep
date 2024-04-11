@@ -9,4 +9,5 @@
     <color name="text_color">#E82516</color>
     <color name="grey">#DDDDDD</color>
     <color name="black_overlay">#66000000</color>
+    <color name="light_purple">#66FFA749</color>
 </resources>

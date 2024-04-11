@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -31,16 +33,16 @@ class AddProperty : AppCompatActivity() {
         val contactPersonEditText: TextInputEditText = findViewById(R.id.contact_person)
         val contactNumberEditText: TextInputEditText = findViewById(R.id.contact_number)
         val priceEditText: TextInputEditText = findViewById(R.id.price)
-        val typeEditText: TextInputEditText = findViewById(R.id.type)
-
+        val radioGroup: RadioGroup = findViewById(R.id.radio_group)
         addButton.setOnClickListener {
             val name = nameEditText.text.toString().trim()
             val address = addressEditText.text.toString().trim()
             val contactPerson = contactPersonEditText.text.toString().trim()
             val contactNumber = contactNumberEditText.text.toString().trim()
             val price = priceEditText.text.toString().toDoubleOrNull() ?: 0.0
-            val type = typeEditText.text.toString().trim()
-
+            val selectedId = radioGroup.checkedRadioButtonId
+            val radioButton: RadioButton = findViewById(selectedId)
+            val type = radioButton.text.toString()
             if (name.isEmpty() || address.isEmpty() || contactPerson.isEmpty() || contactNumber.isEmpty() || price == 0.0 || type.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener

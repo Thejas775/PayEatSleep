@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.thejas.findit.Property
 import com.thejas.findit.R
 
-class PropertyAdapter(private val properties: List<Property>) : RecyclerView.Adapter<PropertyAdapter.PropertyViewHolder>() {
+class PropertyAdapter(private var properties: List<Property>) : RecyclerView.Adapter<PropertyAdapter.PropertyViewHolder>() {
 
     class PropertyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nameTextView: TextView = view.findViewById(R.id.property_name)
@@ -34,5 +34,9 @@ class PropertyAdapter(private val properties: List<Property>) : RecyclerView.Ada
 
     override fun getItemCount(): Int {
         return properties.size
+    }
+    fun updateList(newList: List<Property>) {
+        properties = newList
+        notifyDataSetChanged()
     }
 }
